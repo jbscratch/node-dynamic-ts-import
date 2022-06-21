@@ -1,4 +1,4 @@
-export const devappConfig = {
+export const devappConfig: { some: string } = {
 	some: 'content',
 };
 
