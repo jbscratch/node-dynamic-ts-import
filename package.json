@@ -4,6 +4,7 @@
 	"description": "",
 	"scripts": {
 		"start": "",
+		"esm": "node esm-demo.mjs",
 		"cjs": "node cjs-demo.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
