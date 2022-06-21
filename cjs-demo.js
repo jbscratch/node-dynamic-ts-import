@@ -5,6 +5,7 @@ async function main() {
 	console.log('Running');
 	// TS Config Docs: https://www.typescriptlang.org/tsconfig
 	const tsService = create({
+		transpileOnly: true,
 		compilerOptions: {
 			target: 'es5',
 			module: 'commonjs',
