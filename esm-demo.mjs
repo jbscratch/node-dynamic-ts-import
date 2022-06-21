@@ -19,11 +19,15 @@ async function main() {
 	const dynamicTsFile = await fs.readFile(`./my-ts-module.ts`, 'utf-8');
 	const jsOutput = tsService.compile(dynamicTsFile, './my-ts-module.ts');
 
+	const jsFile = `./out/my-ts-module.mjs`;
+	await fs.ensureDir('./out');
+	await fs.writeFile(jsFile, jsOutput);
+
 	console.log({ jsOutput });
 
-	// const result = eval(jsOutput);
+	const module = await import(jsFile);
 
-	// console.log(result);
+	console.log(module);
 }
 
 main();
